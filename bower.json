@@ -1,0 +1,23 @@
+{
+  "name": "HRManagement",
+  "homepage": "https://github.com/debayansen/empDashboad",
+  "authors": [
+    "Debayansen"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "angular": "^1.5.5",
+    "angular-material": "^1.0.9",
+    "angular-route": "^1.5.5"
+  }
+}
