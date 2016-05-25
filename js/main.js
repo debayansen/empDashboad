@@ -1,1 +1,1 @@
-!function(){angular.module("frankrossManagement",[])}();
+var app=angular.module("frankrossManagement",[]);

@@ -2,15 +2,15 @@ var gulp = require('gulp'),
     uglify = require('gulp-uglify'),
     sass = require('gulp-sass'),
     jade = require('gulp-jade'),
-    concat = require('gulp-concat')
+    // concat = require('gulp-concat'),
     // jshint = require('gulp-jshint'),
     watch = require('gulp-watch');
 
-gulp.task('concat', function () {
-    gulp.src('bower_components/**/*.js')
-        .pipe(concat('lib.js'))
-        .pipe(gulp.dest('js/lib/'));
-});
+// gulp.task('concat', function() {
+//     gulp.src('bower_components/**/*.js')
+//         .pipe(concat('lib.js'))
+//         .pipe(gulp.dest('js/lib/'));
+// });
 
 gulp.task('scripts', function(){
     gulp.src('js/**/*.js')
@@ -31,11 +31,12 @@ gulp.task('templates', function(){
 })
 
 gulp.task('watch', function(){
-    gulp.watch('bower_components/**/*.js',['concat']);
+    // gulp.watch('bower_components/**/*.js',['concat']);
     gulp.watch('js/**/*.js',['scripts']);
     gulp.watch('css/**/*.scss',['styles']);
     gulp.watch('templates/**/*.jade',['templates']);
 
 });
 
-gulp.task('default', ['concat', 'scripts','styles', 'templates', 'watch']);
+// gulp.task('default', ['concat', 'scripts','styles', 'templates', 'watch']);
+gulp.task('default', ['scripts','styles', 'templates', 'watch']);
