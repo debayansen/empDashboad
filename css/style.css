@@ -55,9 +55,10 @@ body {
       display: inline-block;
       text-align: right;
       float: right;
-      padding: 25px 20px 5px; }
+      padding: 25px 20px 10px; }
       .wrapper header .rightArea .notify {
-        display: inline-block; }
+        display: inline-block;
+        margin-right: 20px; }
         .wrapper header .rightArea .notify ul li {
           display: inline-block; }
       .wrapper header .rightArea .userArea {
