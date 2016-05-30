@@ -13,9 +13,9 @@ var gulp    = require('gulp'),
 // });
 
 gulp.task('scripts', function(){
-    gulp.src('js/**/*.js')
-        .pipe(uglify())
-        .pipe(gulp.dest('js/'));
+    // gulp.src('js/**/*.js')
+    //     .pipe(uglify())
+    //     .pipe(gulp.dest('js/'));
 });
 
 gulp.task('styles', function(){

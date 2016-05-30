@@ -5,11 +5,12 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" media="screen" title="no title" charset="utf-8">
         <link rel="stylesheet" href="css/style.css" media="screen" title="no title" charset="utf-8">
+        <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0-rc2/angular-material.min.css">
         <!-- <script type="text/javascript" src="js/lib/lib.js"></script> -->
 
     </head>
     <body ng-app='frankrossManagement'>
-        <div class="loginPanel">
+        <div class="loginPanel" ng-controller='loginCtrl'>
             <div class="frBanner">
                 Emami Frank Ross: Login Portal
             </div>
@@ -23,12 +24,13 @@
             </div>
         </div>
 
-        <div class="wrapper">
-            <header>
-                <div class="banner">
+        <div class="wrapper" layout='column' layout-align='center stretch'>
+
+            <header ng-controller='userProfileCtrl'>
+                <div class="banner" flex>
                     Emami Frank Ross
                 </div>
-                <div class="rightArea">
+                <div class="rightArea" flex>
                     <div class="notify">
                         <ul>
                             <li><i class="fa fa-envelope" aria-hidden="true"></i></li>
@@ -36,20 +38,37 @@
                             <li><i class="fa fa-tasks" aria-hidden="true"></i></li>
                         </ul>
                     </div>
-                    <div class="userArea">
-                        Debayan Sen
-                    </div>
                 </div>
 
             </header>
 
-            <section class='contentArea'>
-                <aside class="">
-                    Aside Here
+            <section class='contentArea' layout flex>
+                <aside layout='column' flex='20'>
+                    <div class="profileArea" ng-controller='userProfileCtrl'>
+                        <figure><img class='profilePic' src="images/dummy.jpg" alt="" /></figure>
+                        <label class='profileName' for="name">Hi, {{name}}</label>
+                        <a class='.btns' href="#">My Account</a>
+                        <a class='.btns' href="#">LogOut</a>
+                    </div>
+                    <div class="taskArea">
+                        <a class='.btns' href="#">Attendence</a>
+                        <a class='.btns' href="#">Policies</a>
+                        <a class='.btns' href="#">Reimbursments</a>
+                        <a class='.btns' href="#">Reporting Structure</a>
+                        <a class='.btns' href="#">Leaves</a>
+                        <a class='.btns' href="#">Appreasels</a>
+                    </div>
                 </aside>
-                <section>
-                    Content Area Here
+
+                <section layout='column' flex>
+                    <div class="empdashboard">
+                        empdashboard here
+                    </div>
+                    <div class="hrdashboard">
+                        hrdashboard here
+                    </div>
                 </section>
+
             </section>
 
             <footer>
