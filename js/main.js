@@ -6,7 +6,8 @@ var app=angular.module("frankrossManagement",['ngMaterial'])
 
                 })
                 .controller('userProfileCtrl', function($scope){
-                    $scope.name = "Debayan Sen"
+                    $scope.name = user.name;
+                    $scope.pic = user.pic;
                 })
                 .controller('BasicDemoCtrl', function DemoCtrl($mdDialog) {
                     var originatorEv;
@@ -40,5 +41,7 @@ var user = {
     "empID":"EFRL4984",
     "name":"Debayan Sen",
     "position":"Software Engineer",
-    "doj":"01-March-2016"
+    "doj":"01-Mar-2016",
+    "dob":"07-Jan-1989",
+    "pic":"images/dummy.jpg"
 }

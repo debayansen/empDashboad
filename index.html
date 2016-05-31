@@ -40,17 +40,18 @@
                                     <i class="fa fa-envelope" aria-hidden="true"></i>
                                 </md-button>
                             </li>
-
                             <li>
                                 <span class="badge">4</span>
                                 <md-button class="md-fab" aria-label="mail">
-                                    <i class="fa fa-bell-o" aria-hidden="true"></i></li>
+                                    <i class="fa fa-bell-o" aria-hidden="true"></i>
                                 </md-button>
+                            </li>
                             <li>
                                 <span class="badge">7</span>
                                 <md-button class="md-fab" aria-label="mail">
-                                    <i class="fa fa-tasks" aria-hidden="true"></i></li>
+                                    <i class="fa fa-tasks" aria-hidden="true"></i>
                                 </md-button>
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -60,7 +61,7 @@
             <section class='contentArea' layout flex>
                 <aside layout='column' flex='20'>
                     <div class="profileArea" ng-controller='userProfileCtrl'>
-                        <figure><img class='profilePic' src="images/dummy.jpg" alt="" /></figure>
+                        <figure><img class='profilePic' ng-src="{{pic}}" alt="" /></figure>
                         <label class='profileName' for="name">Hi, {{name}}</label>
                         <a class='.btns' href="#">My Account</a>
                         <a class='.btns' href="#">LogOut</a>
@@ -79,35 +80,30 @@
                     <div class="empdashboard">
                         empdashboard here
                     </div>
+
                     <div class="hrdashboard">
                         hrdashboard here <br>
                         <md-menu ng-controller="BasicDemoCtrl">
                           <md-button aria-label="Open phone interactions menu" class="md-icon-button" ng-click="ctrl.openMenu($mdOpenMenu, $event)">
                             DONKEY
                           </md-button>
-                          <md-menu-content width="4">
+                          <md-menu-content width="3">
                             <md-menu-item>
-                              <md-button ng-click="ctrl.redial($event)">
-                                <md-icon md-svg-icon="call:dialpad" md-menu-align-target></md-icon>
-                                Redial
-                              </md-button>
+                              <md-button ng-click="ctrl.redial($event)">Redial</md-button>
                             </md-menu-item>
                             <md-menu-item>
-                              <md-button disabled="disabled" ng-click="ctrl.checkVoicemail()">
-                                <md-icon md-svg-icon="call:voicemail"></md-icon>
-                                Check voicemail
-                              </md-button>
+                              <md-button disabled="disabled" ng-click="ctrl.checkVoicemail()">Check voicemail</md-button>
                             </md-menu-item>
                             <md-menu-divider></md-menu-divider>
                             <md-menu-item>
                               <md-button ng-click="ctrl.toggleNotifications()">
-                                <md-icon md-svg-icon="social:notifications-{{ctrl.notificationsEnabled ? 'off' : 'on'}}"></md-icon>
                                 {{ctrl.notificationsEnabled ? 'Disable' : 'Enable' }} notifications
                               </md-button>
                             </md-menu-item>
                           </md-menu-content>
                         </md-menu>
                     </div>
+
                 </section>
 
             </section>
