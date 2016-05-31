@@ -4,38 +4,53 @@
         <title>Emami Frank Ross Employee Dashboard</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" media="screen" title="no title" charset="utf-8">
-        <link rel="stylesheet" href="css/style.css" media="screen" title="no title" charset="utf-8">
         <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0-rc2/angular-material.min.css">
+        <link rel="stylesheet" href="css/style.css" media="screen" title="no title" charset="utf-8">
         <!-- <script type="text/javascript" src="js/lib/lib.js"></script> -->
 
     </head>
-    <body ng-app='frankrossManagement'>
-        <div class="loginPanel" ng-controller='loginCtrl'>
-            <div class="frBanner">
+    <body ng-app='frankrossManagement' layout='column' flex layout-align='start stretch'>
+
+        <div class="loginPanel" ng-controller='loginCtrl' layout='column' flex layout-align="start stretch">
+            <div class="frBanner" flex='30' layout="column" layout-align="none">
                 Emami Frank Ross: Login Portal
-            </div>
-            <div class="userLogin">
-                Please Login.
-                <form class="login" action="index.html" method="post">
-                    <label for="username">Username</label>: <input type="text" name="username" value="" placeholder='Enter your User Name here:'><br>
-                    <label for="password">Password</label>: <input type="text" name="password" value="" placeholder='Enter your password here:'><br>
-                    <input type="button" name="login" value="Login" placeholder='Login'><br>
-                </form>
+                <div class="userLogin" flex>
+                    <div class="panel">
+                        Please Login.
+                        <form class="login" action="index.html" method="post">
+                            <label for="username">Username:</label> <input type="text" name="username" value="" placeholder='Enter your User Name here.'><br>
+                            <label for="password">Password:</label> <input type="text" name="password" value="" placeholder='Enter your password here.'><br>
+                            <input type="button" name="login" value="Login" placeholder='Login'><br>
+                        </form>
+                    </div>
+                </div>
             </div>
         </div>
 
         <div class="wrapper" layout='column' layout-align='center stretch'>
 
-            <header ng-controller='userProfileCtrl'>
-                <div class="banner" flex>
-                    Emami Frank Ross
-                </div>
-                <div class="rightArea" flex>
+            <header class="md-toolbar-tools" ng-controller='userProfileCtrl' layout="row" flex layout-align="center center">
+                <div class="banner" layout flex='30' layout-align="start center">Emami Frank Ross</div>
+                <div class="rightArea" layout flex layout-align="end center">
                     <div class="notify">
                         <ul>
-                            <li><i class="fa fa-envelope" aria-hidden="true"></i></li>
-                            <li><i class="fa fa-bell-o" aria-hidden="true"></i></li>
-                            <li><i class="fa fa-tasks" aria-hidden="true"></i></li>
+                            <li>
+                                <span class="badge">5</span>
+                                <md-button class="md-fab" aria-label="mail">
+                                    <i class="fa fa-envelope" aria-hidden="true"></i>
+                                </md-button>
+                            </li>
+
+                            <li>
+                                <span class="badge">4</span>
+                                <md-button class="md-fab" aria-label="mail">
+                                    <i class="fa fa-bell-o" aria-hidden="true"></i></li>
+                                </md-button>
+                            <li>
+                                <span class="badge">7</span>
+                                <md-button class="md-fab" aria-label="mail">
+                                    <i class="fa fa-tasks" aria-hidden="true"></i></li>
+                                </md-button>
                         </ul>
                     </div>
                 </div>
@@ -50,6 +65,7 @@
                         <a class='.btns' href="#">My Account</a>
                         <a class='.btns' href="#">LogOut</a>
                     </div>
+                    <hr>
                     <div class="taskArea">
                         <a class='.btns' href="#">Attendence</a>
                         <a class='.btns' href="#">Policies</a>
@@ -59,13 +75,38 @@
                         <a class='.btns' href="#">Appreasels</a>
                     </div>
                 </aside>
-
                 <section layout='column' flex>
                     <div class="empdashboard">
                         empdashboard here
                     </div>
                     <div class="hrdashboard">
-                        hrdashboard here
+                        hrdashboard here <br>
+                        <md-menu ng-controller="BasicDemoCtrl">
+                          <md-button aria-label="Open phone interactions menu" class="md-icon-button" ng-click="ctrl.openMenu($mdOpenMenu, $event)">
+                            DONKEY
+                          </md-button>
+                          <md-menu-content width="4">
+                            <md-menu-item>
+                              <md-button ng-click="ctrl.redial($event)">
+                                <md-icon md-svg-icon="call:dialpad" md-menu-align-target></md-icon>
+                                Redial
+                              </md-button>
+                            </md-menu-item>
+                            <md-menu-item>
+                              <md-button disabled="disabled" ng-click="ctrl.checkVoicemail()">
+                                <md-icon md-svg-icon="call:voicemail"></md-icon>
+                                Check voicemail
+                              </md-button>
+                            </md-menu-item>
+                            <md-menu-divider></md-menu-divider>
+                            <md-menu-item>
+                              <md-button ng-click="ctrl.toggleNotifications()">
+                                <md-icon md-svg-icon="social:notifications-{{ctrl.notificationsEnabled ? 'off' : 'on'}}"></md-icon>
+                                {{ctrl.notificationsEnabled ? 'Disable' : 'Enable' }} notifications
+                              </md-button>
+                            </md-menu-item>
+                          </md-menu-content>
+                        </md-menu>
                     </div>
                 </section>
 

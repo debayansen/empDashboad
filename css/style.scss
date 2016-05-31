@@ -12,91 +12,115 @@ $thirdFontSize: 16px;
 $backgroundColor1:#129271;
 // $backgroundColor2:#000;
 $backgroundColor2:#E066FF;
-
+$transparentBGColor: rgba(0,0,0,0.35);
 
 *{
     padding: 0px;
     margin:0px;
 }
 body{
-    width: 100%;
-    height: 100%;
+    // width: 100%;
+    // height: 100%;
+    // background-color: red;
 }
 
 .loginPanel{
-    background: linear-gradient(#129271, #E066FF);
     display: none;
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    opacity: 0.8;
+    background: linear-gradient(#129271, #E066FF);
+    opacity: 1;
     .frBanner{
+        font-size: 30px;
         text-align: center;
         padding:60px 30px 5px;
         margin-bottom:5px;
         color: $FontColor1;
+        .userLogin{
+            margin: auto;
+            .panel{
+                font-size: 18px;
+                text-align: center;
+                padding:5% 10px;
+                width: 350px;
+                background-color: #fff;
+                border-radius: 11px;
+                form{
+                    text-align:center;
+                    padding: 5px;
+                    font-family: $primaryFontFamily;
+                    label{
+                        width: 30%;
+                        color: #000;
+                    }
+                    inout[type=text]{
+                        width:70%;
+                    }
+                    input[type=button]{
+                        width: 80%;
+                        background-color:#129271;
+                        color: $FontColor1;
+                        padding: 10px;
+                        margin: 10px auto;
+                        &:active{
+                            background-color: #fff;
 
-    }
-    .userLogin{
-        text-align: center;
-        width: 350px;
-        background-color: #fff;
-        padding:5%;
-        margin: auto;
-        border-radius: 11px;
-        form{
-            margin: 5px;
-            font-family: $primaryFontFamily;
-            label{
-                color: #000;
-            }
-            input[type=button]{
-                background-color:#129271;
-                color: $FontColor1;
-                padding: 10px;
-                &:active{
-                    background-color: #fff;
-
+                        }
+                    }
                 }
             }
+
         }
     }
 }
 
 .wrapper{
     display: block;
-    // display: none;
-    width: 100%;
-    margin: 0px auto;
-
     header{
+        padding-top: 15px;
         font-family: $primaryFontFamily;
-        background-color: #053428;
+        // background-color: #053428;
         margin-bottom: 2px;
-        // background: linear-gradient( $backgroundColor2 5%, $backgroundColor1);
-
-        // width: 100%;
-        color: $FontColor1;
-        display: inline-block;
-        height: 50px;
+        // color: $FontColor1;
+        color: $FontColor2;
+        // height: 50px;
         .banner{
-            display: inline-block;
-            padding: 25px 20px 5px;
-            width: 30%;
+            font-size: 20px;
+            // padding: 0px 20px;
         }
         .rightArea{
-            display: inline-block;
-            text-align: right;
-            float: right;
-            padding: 25px 20px 10px;
+            background-color: #fff;
             .notify{
                 display: inline-block;
                 margin-right: 20px;
-                // width: 20%;
+
                 ul{
                     li{
                         display: inline-block;
-                        margin: 0px 5px;
+                        .badge{
+                            width: 13px;
+                            height: 13px;
+                            background-color: red;
+                            position: absolute;
+                            top: 10px;
+                            border-radius: 8px;
+                            z-index: 999;
+                            padding: 4px;
+                            font-size: 15px;
+                            text-align: center;
+                        }
+                        .md-fab{
+                            background-color: #fff;
+                            border: 1px solid #053428;
+                            font-size: 18px;
+                            width: 40px;
+                            height: 40px;
+                            color: #053428;
+                            line-height: 40px;
+                            &:hover{
+                                background-color: #053428;
+                                border: 1px solid #fff;
+                                color: #fff;
+                            }
+                        }
                         a{
 
                         }
@@ -114,43 +138,44 @@ body{
     }
 
     .contentArea{
-        display: none;
+        // display: none;
         margin-bottom: 2px;
         height: 100%;
         background: linear-gradient( $backgroundColor1, $backgroundColor2);
         width: 100%;
         color: $FontColor1;
         aside{
-            background-color:#2c1433;
-            // width: 20%;
+            background-color: $transparentBGColor;
             display: inline-block;
-            padding: 10px;
+            // padding: 10px;
             .profileArea{
                 text-align: center;
-                background-color: #fff;
+                color: #fff;
+                // background-color: #fff;
                 opacity: 0.8;
                 border-radius: 10px;
                 padding: 10px;
-                margin-bottom: 10px;
+                // margin-bottom: 10px;
                 .profilePic{
                     border-radius: 50%;
                     width: 80%;
+                    border: 5px solid #807284;
                 }
                 .profileName{
-                    color:$FontColor2;
+                    color:$FontColor1;
                     width: 100%;
 
                 }
                 a{
                     text-decoration: none;
                     display: block;
-                    border-radius:10px;
-                    color:$FontColor2;
+                    border-radius:5px;
+                    color:$FontColor1;
                     margin: 7px auto;
                     text-align: center;
                     width: 90%;
                     padding: 5px;
-                    border: 1px solid $FontColor2;
+                    border: 1px solid $FontColor1;
                     &:hover{
                         color: $FontColor1;
                         background-color: #2c1433;
@@ -159,20 +184,20 @@ body{
             }
             .taskArea{
                 text-align: center;
-                background-color: #fff;
+                // background-color: $transparentBGColor;
                 opacity: 0.8;
                 border-radius: 10px;
                 padding: 10px;
                 a{
                     text-decoration: none;
                     display: block;
-                    border-radius:10px;
-                    color:$FontColor2;
+                    border-radius:5px;
+                    color:$FontColor1;
                     margin: 7px auto;
                     text-align: center;
-                    width: 90%;
+                    // width: 100%;
                     padding: 5px;
-                    border: 1px solid $FontColor2;
+                    border: 1px solid $FontColor1;
                     &:hover{
                         color: $FontColor1;
                         background-color: #2c1433;
@@ -181,39 +206,38 @@ body{
             }
         }
         section{
-            // width: 65%;
             padding: 11px;
             display: inline-block;
 
             .empdashboard{
                 text-align: center;
-                background-color: #fff;
-                opacity: 0.8;
-                border-radius: 10px;
+                background-color: $transparentBGColor;
+                border-radius: 5px;
                 padding: 10px;
                 margin-bottom: 10px;
             }
             .hrdashboard{
+
+
                 text-align: center;
-                background-color: #fff;
-                opacity: 0.8;
-                border-radius: 10px;
+                background-color: $transparentBGColor;
+                border-radius: 5px;
                 padding: 10px;
                 margin-bottom: 10px;
 
+
+                .menudemoBasicUsage .md-menu-demo {
+                    padding: 24px; }
+                .menudemoBasicUsage .menu-demo-container {
+                    min-height: 200px; }
             }
 
         }
-
     }
 
     footer{
-        display: none;
-
+        // display: none;
         // border: 2px solid red;
-        position: fixed;
-        bottom: 0px;
-        width: 100%;
         color: $FontColor1;
         .footerLinks{
 
