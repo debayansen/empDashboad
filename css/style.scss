@@ -1,18 +1,7 @@
-$primaryBGColor : #fff;
-
-$primaryFontFamily : 'Tahoma';
-$FontColor1: #fff;
-$FontColor2:#000;
-
-$primaryFontSize: 20px;
-$secondaryFontSize: 18px;
-$thirdFontSize: 16px;
-
-// $backgroundColor1:#fff;
-$backgroundColor1:#129271;
-// $backgroundColor2:#000;
-$backgroundColor2:#E066FF;
-$transparentBGColor: rgba(0,0,0,0.35);
+@import "var.scss";
+@import "loginPanel.scss";
+@import "header.scss";
+@import "footer.scss";
 
 *{
     padding: 0px;
@@ -24,118 +13,9 @@ body{
     // background-color: red;
 }
 
-.loginPanel{
-    display: none;
-    background: linear-gradient(#129271, #E066FF);
-    opacity: 1;
-    .frBanner{
-        font-size: 30px;
-        text-align: center;
-        padding:60px 30px 5px;
-        margin-bottom:5px;
-        color: $FontColor1;
-        .userLogin{
-            margin: auto;
-            .panel{
-                font-size: 18px;
-                text-align: center;
-                padding:5% 10px;
-                width: 350px;
-                background-color: #fff;
-                border-radius: 11px;
-                form{
-                    text-align:center;
-                    padding: 5px;
-                    font-family: $primaryFontFamily;
-                    label{
-                        width: 30%;
-                        color: #000;
-                    }
-                    inout[type=text]{
-                        width:70%;
-                    }
-                    input[type=button]{
-                        width: 80%;
-                        background-color:#129271;
-                        color: $FontColor1;
-                        padding: 10px;
-                        margin: 10px auto;
-                        &:active{
-                            background-color: #fff;
-
-                        }
-                    }
-                }
-            }
-
-        }
-    }
-}
 
 .wrapper{
     display: block;
-    header{
-        padding-top: 15px;
-        font-family: $primaryFontFamily;
-        // background-color: #053428;
-        margin-bottom: 2px;
-        // color: $FontColor1;
-        color: $FontColor2;
-        // height: 50px;
-        .banner{
-            font-size: 20px;
-            // padding: 0px 20px;
-        }
-        .rightArea{
-            background-color: #fff;
-            .notify{
-                display: inline-block;
-                margin-right: 20px;
-
-                ul{
-                    li{
-                        display: inline-block;
-                        .badge{
-                            width: 13px;
-                            height: 13px;
-                            background-color: red;
-                            position: absolute;
-                            top: 10px;
-                            border-radius: 8px;
-                            z-index: 999;
-                            padding: 4px;
-                            font-size: 15px;
-                            text-align: center;
-                        }
-                        .md-fab{
-                            background-color: #fff;
-                            border: 1px solid #053428;
-                            font-size: 18px;
-                            width: 40px;
-                            height: 40px;
-                            color: #053428;
-                            line-height: 40px;
-                            &:hover{
-                                background-color: #053428;
-                                border: 1px solid #fff;
-                                color: #fff;
-                            }
-                        }
-                        a{
-
-                        }
-                    }
-                }
-                // float: right;
-            }
-            .userArea{
-                display: inline-block;
-                // width: 30%;
-                // float: right;
-            }
-        }
-
-    }
 
     .contentArea{
         // display: none;
@@ -216,9 +96,8 @@ body{
                 padding: 10px;
                 margin-bottom: 10px;
             }
+
             .hrdashboard{
-
-
                 text-align: center;
                 background-color: $transparentBGColor;
                 border-radius: 5px;
@@ -234,20 +113,5 @@ body{
 
         }
     }
-
-    footer{
-        // display: none;
-        // border: 2px solid red;
-        color: $FontColor1;
-        .footerLinks{
-
-        }
-        .copyright{
-            background-color: #000;
-            padding: 5px;
-            text-align: center;
-        }
-    }
-
 
 }

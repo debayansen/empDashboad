@@ -1,7 +1,3 @@
-* {
-  padding: 0px;
-  margin: 0px; }
-
 .loginPanel {
   display: none;
   background: linear-gradient(#129271, #E066FF);
@@ -24,7 +20,7 @@
         .loginPanel .frBanner .userLogin .panel form {
           text-align: center;
           padding: 5px;
-          font-family: "Tahoma"; }
+          font-family: "Roboto"; }
           .loginPanel .frBanner .userLogin .panel form label {
             width: 30%;
             color: #000; }
@@ -39,47 +35,61 @@
             .loginPanel .frBanner .userLogin .panel form input[type=button]:active {
               background-color: #fff; }
 
+header {
+  padding-top: 15px;
+  font-family: "Roboto";
+  margin-bottom: 2px;
+  color: #000; }
+  header .banner {
+    font-size: 50px;
+    color: #129271;
+    font-family: "Roboto"; }
+  header .rightArea {
+    background-color: #fff; }
+    header .rightArea .notify {
+      display: inline-block;
+      margin-right: 20px; }
+      header .rightArea .notify ul li {
+        display: inline-block; }
+        header .rightArea .notify ul li .badge {
+          width: 13px;
+          height: 13px;
+          background-color: red;
+          position: absolute;
+          top: 10px;
+          border-radius: 8px;
+          z-index: 999;
+          padding: 4px;
+          font-size: 15px;
+          text-align: center; }
+        header .rightArea .notify ul li .md-fab {
+          background-color: #fff;
+          border: 1px solid #053428;
+          font-size: 18px;
+          width: 40px;
+          height: 40px;
+          color: #053428;
+          line-height: 40px; }
+          header .rightArea .notify ul li .md-fab:hover {
+            background-color: #053428;
+            border: 1px solid #fff;
+            color: #fff; }
+    header .rightArea .userArea {
+      display: inline-block; }
+
+footer {
+  color: #fff; }
+  footer .copyright {
+    background-color: #000;
+    padding: 5px;
+    text-align: center; }
+
+* {
+  padding: 0px;
+  margin: 0px; }
+
 .wrapper {
   display: block; }
-  .wrapper header {
-    padding-top: 15px;
-    font-family: "Tahoma";
-    margin-bottom: 2px;
-    color: #000; }
-    .wrapper header .banner {
-      font-size: 20px; }
-    .wrapper header .rightArea {
-      background-color: #fff; }
-      .wrapper header .rightArea .notify {
-        display: inline-block;
-        margin-right: 20px; }
-        .wrapper header .rightArea .notify ul li {
-          display: inline-block; }
-          .wrapper header .rightArea .notify ul li .badge {
-            width: 13px;
-            height: 13px;
-            background-color: red;
-            position: absolute;
-            top: 10px;
-            border-radius: 8px;
-            z-index: 999;
-            padding: 4px;
-            font-size: 15px;
-            text-align: center; }
-          .wrapper header .rightArea .notify ul li .md-fab {
-            background-color: #fff;
-            border: 1px solid #053428;
-            font-size: 18px;
-            width: 40px;
-            height: 40px;
-            color: #053428;
-            line-height: 40px; }
-            .wrapper header .rightArea .notify ul li .md-fab:hover {
-              background-color: #053428;
-              border: 1px solid #fff;
-              color: #fff; }
-      .wrapper header .rightArea .userArea {
-        display: inline-block; }
   .wrapper .contentArea {
     margin-bottom: 2px;
     height: 100%;
@@ -151,9 +161,3 @@
           padding: 24px; }
         .wrapper .contentArea section .hrdashboard .menudemoBasicUsage .menu-demo-container {
           min-height: 200px; }
-  .wrapper footer {
-    color: #fff; }
-    .wrapper footer .copyright {
-      background-color: #000;
-      padding: 5px;
-      text-align: center; }

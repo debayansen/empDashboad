@@ -1,0 +1,49 @@
+@import "var.scss";
+
+.loginPanel{
+    display: none;
+    background: linear-gradient(#129271, #E066FF);
+    opacity: 1;
+    .frBanner{
+        font-size: 30px;
+        text-align: center;
+        padding:60px 30px 5px;
+        margin-bottom:5px;
+        color: $FontColor1;
+        .userLogin{
+            margin: auto;
+            .panel{
+                font-size: 18px;
+                text-align: center;
+                padding:5% 10px;
+                width: 350px;
+                background-color: #fff;
+                border-radius: 11px;
+                form{
+                    text-align:center;
+                    padding: 5px;
+                    font-family: $primaryFontFamily;
+                    label{
+                        width: 30%;
+                        color: #000;
+                    }
+                    inout[type=text]{
+                        width:70%;
+                    }
+                    input[type=button]{
+                        width: 80%;
+                        background-color:#129271;
+                        color: $FontColor1;
+                        padding: 10px;
+                        margin: 10px auto;
+                        &:active{
+                            background-color: #fff;
+
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+}
