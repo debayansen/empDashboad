@@ -1,0 +1,27 @@
+aside(layout='column',
+    flex='20')
+    .profileArea(ng-controller='userProfileCtrl')
+        figure
+            img(class='profilePic',
+                ng-src="{{pic}}",
+                alt="{{name}}")
+        label(class='profileName',
+            for="name") {{name}}
+        a(class='.btns',
+            href="#") My Account
+        a(class='.btns',
+            href="#") LogOut
+    <hr>
+    .taskArea
+        a(class='.btns',
+            href="#") Attendence
+        a(class='.btns',
+            href="#") Policies
+        a(class='.btns',
+            href="#") Reimbursments
+        a(class='.btns',
+            href="#") Reporting Structure
+        a(class='.btns',
+            href="#") Leaves
+        a(class='.btns',
+            href="#") Appreasels
