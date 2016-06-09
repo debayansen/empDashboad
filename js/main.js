@@ -1,4 +1,4 @@
-var app=angular.module("frankrossManagement",['ngMaterial'])
+angular.module("frankrossManagement",['ngMaterial'])
                 .controller('loginCtrl', function(){
 
                 })

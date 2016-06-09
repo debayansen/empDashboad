@@ -41,9 +41,11 @@ header {
   margin-bottom: 2px;
   color: #000; }
   header .banner {
-    font-size: 50px;
+    font-size: 2.5em;
     color: #129271;
     font-family: "Roboto"; }
+    header .banner img {
+      width: 0.7em; }
   header .rightArea {
     background-color: #fff; }
     header .rightArea .notify {

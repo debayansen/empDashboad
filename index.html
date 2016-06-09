@@ -11,8 +11,13 @@
     </head>
     <body ng-app='frankrossManagement' layout='column' flex layout-align='start stretch'>
 
+        <efr-login></efr-login>
+        <efr-header></efr-header>
+        <div class='ng-view'></div>
+        <efr-footer></efr-footer>
+
         <div class="loginPanel" ng-controller='loginCtrl' layout='column' flex layout-align="start stretch">
-            <div class="frBanner" flex='30' layout="column" layout-align="none">
+            <div class="frBanner" flex='50' layout="column" layout-align="none">
                 Emami Frank Ross: Login Portal
                 <div class="userLogin" flex>
                     <div class="panel">
@@ -30,7 +35,7 @@
         <div class="wrapper" layout='column' layout-align='center stretch'>
 
             <header class="md-toolbar-tools" ng-controller='userProfileCtrl' layout="row" flex layout-align="center center">
-                <div class="banner" layout flex='30' layout-align="start center"><img src="images/logo1.png" alt="" />FRANK ROSS</div>
+                <div class="banner" layout flex='50' layout-align="start center"><img src="images/logo1.png" alt="" />FRANK ROSS</div>
                 <div class="rightArea" layout flex layout-align="end center">
                     <div class="notify">
                         <ul>
@@ -55,7 +60,6 @@
                         </ul>
                     </div>
                 </div>
-
             </header>
 
             <section class='contentArea' layout flex>
@@ -125,6 +129,7 @@
         <script type="text/javascript" src='bower_components/angular-aria/angular-aria.js'></script>
         <script type="text/javascript" src='bower_components/angular-messages/angular-messages.js'></script>
         <script type="text/javascript" src='bower_components/angular-material/angular-material.js'></script>
+
         <script type="text/javascript" src="js/main.js"></script>
     </body>
 </html>

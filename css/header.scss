@@ -1,17 +1,19 @@
 @import "var.scss";
 
+$headerFont:2.5em;
+
 header{
     padding-top: 15px;
     font-family: $primaryFontFamily;
-    // background-color: #053428;
     margin-bottom: 2px;
-    // color: $FontColor1;
     color: $FontColor2;
-    // height: 50px;
     .banner{
-        font-size: 50px;
+        font-size: $headerFont;
         color: $backgroundColor1;
         font-family: $primaryFontFamily;
+        img{
+            width: 0.7em;
+        }
         // padding: 0px 20px;
     }
     .rightArea{
@@ -19,7 +21,6 @@ header{
         .notify{
             display: inline-block;
             margin-right: 20px;
-
             ul{
                 li{
                     display: inline-block;
