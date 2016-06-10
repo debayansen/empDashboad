@@ -1,7 +1,52 @@
-header(
-    class="md-toolbar-tools",
-    ng-controller='userProfileCtrl',
-    layout="row",
-    flex,
-    layout-align="center center"
+.banner(
+    layout,
+    flex='50',
+    layout-align="start center"
     )
+     img(
+        src="images/logo1.png",
+        alt="FrankRoss_Logo"
+        )
+     span FrankRoss
+.rightArea(
+    layout,
+    flex,
+    layout-align="end center"
+    )
+    .notify
+        ul
+            li
+                span(
+                    class='badge'
+                    ) 5
+                md-button(
+                    class="md-fab",
+                    aria-label="mail"
+                    )
+                    i(
+                        class="fa fa-envelope",
+                        aria-hidden="true"
+                    )
+            li
+                span(
+                    class='badge'
+                    ) 4
+                md-button(
+                    class="md-fab",
+                    aria-label="mail"
+                    )
+                    i(
+                        class="fa fa-bell-o",
+                        aria-hidden="true")
+            li
+                span(
+                    class='badge'
+                    ) 7
+                md-button(
+                    class="md-fab",
+                    aria-label="mail"
+                    )
+                    i(
+                        class="fa fa-tasks",
+                        aria-hidden="true"
+                    )

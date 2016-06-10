@@ -2,11 +2,12 @@
 
 $headerFont:2.5em;
 
-header{
+efr-header{
     padding-top: 15px;
     font-family: $primaryFontFamily;
     margin-bottom: 2px;
     color: $FontColor2;
+    border-bottom: 1px solid #eee;
     .banner{
         font-size: $headerFont;
         color: $backgroundColor1;
@@ -25,6 +26,7 @@ header{
                 li{
                     display: inline-block;
                     .badge{
+                        color:#fff;
                         width: 13px;
                         height: 13px;
                         background-color: red;
