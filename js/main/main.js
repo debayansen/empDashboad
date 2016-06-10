@@ -1,8 +1,6 @@
-angular
-    .module("frankrossManagement",['ngMaterial'])
+angular.module("frankrossManagement",['ngMaterial'])
 
-angular
-    .module('frankrossManagement')
+angular.module('frankrossManagement')
     .directive('efrLogin', function(){
         //Login directive
         return{
@@ -33,9 +31,7 @@ angular
     })
     ;
 
-
-angular
-    .module("frankrossManagement")
+angular.module("frankrossManagement")
     .controller('loginCtrl', function(){
 
     })
