@@ -2,6 +2,39 @@ angular
     .module("frankrossManagement",['ngMaterial'])
 
 angular
+    .module('frankrossManagement')
+    .directive('efrLogin', function(){
+        //Login directive
+        return{
+            restrict   : 'E',
+            templateUrl: 'pages/partial/login.html'
+        };
+    })
+    .directive('efrHeader', function(){
+        //Header directive
+        return{
+            restrict   : 'E',
+            templateUrl: 'pages/partial/header.html'
+        };
+    })
+    .directive('efrFooter', function(){
+        //Footer directive
+        return{
+            restrict   : 'E',
+            templateUrl: 'pages/partial/footer.html'
+        };
+    })
+    .directive('efrAside', function(){
+        //Login directive
+        return{
+            restrict   : 'E',
+            templateUrl: 'pages/partial/aside.html'
+        };
+    })
+    ;
+
+
+angular
     .module("frankrossManagement")
     .controller('loginCtrl', function(){
 

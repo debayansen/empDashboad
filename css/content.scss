@@ -1,0 +1,36 @@
+section{
+    padding: 11px;
+    display: inline-block;
+
+    .nav{
+        text-align: center;
+        background-color: $transparentBGColor2;
+        border-radius: 5px;
+        padding: 10px;
+        margin-bottom: 10px;
+        color:#000;
+    }
+
+    .empdashboard{
+        text-align: center;
+        background-color: $transparentBGColor;
+        border-radius: 5px;
+        padding: 10px;
+        margin-bottom: 10px;
+    }
+
+    .hrdashboard{
+        text-align: center;
+        background-color: $transparentBGColor;
+        border-radius: 5px;
+        padding: 10px;
+        margin-bottom: 10px;
+
+
+        .menudemoBasicUsage .md-menu-demo {
+            padding: 24px; }
+        .menudemoBasicUsage .menu-demo-container {
+            min-height: 200px; }
+    }
+
+}

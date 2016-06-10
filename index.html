@@ -6,137 +6,18 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" media="screen" title="no title" charset="utf-8">
         <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0-rc2/angular-material.min.css">
         <link rel="stylesheet" href="css/style.css" media="screen" title="no title" charset="utf-8">
-        <!-- <script type="text/javascript" src="js/lib/lib.js"></script> -->
-
     </head>
     <body ng-app='frankrossManagement' layout='column' flex layout-align='start stretch'>
-
         <efr-login></efr-login>
-        <efr-header></efr-header>
-        <div class='ng-view'></div>
-        <efr-footer></efr-footer>
-
-        <!-- <div class="loginPanel" ng-controller='loginCtrl' layout='column' flex layout-align="start stretch">
-            <div class="frBanner" flex='50' layout="column" layout-align="none">
-                Emami Frank Ross: Login Portal
-                <div class="userLogin" flex>
-                    <div class="panel">
-                        Please Login.
-                        <form class="login" action="index.html" method="post">
-                            <label for="username">Username:</label> <input type="text" name="username" value="" placeholder='Enter your User Name here.'><br>
-                            <label for="password">Password:</label> <input type="text" name="password" value="" placeholder='Enter your password here.'><br>
-                            <input type="button" name="login" value="Login" placeholder='Login'><br>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div> -->
-
-        <div class="wrapper" layout='column' layout-align='center stretch'>
-
-            <header class="md-toolbar-tools" ng-controller='userProfileCtrl' layout="row" flex layout-align="center center">
-                <div class="banner" layout flex='50' layout-align="start center"><img src="images/logo1.png" alt="" />FRANK ROSS</div>
-                <div class="rightArea" layout flex layout-align="end center">
-                    <div class="notify">
-                        <ul>
-                            <li>
-                                <span class="badge">5</span>
-                                <md-button class="md-fab" aria-label="mail">
-                                    <i class="fa fa-envelope" aria-hidden="true"></i>
-                                </md-button>
-                            </li>
-                            <li>
-                                <span class="badge">4</span>
-                                <md-button class="md-fab" aria-label="mail">
-                                    <i class="fa fa-bell-o" aria-hidden="true"></i>
-                                </md-button>
-                            </li>
-                            <li>
-                                <span class="badge">7</span>
-                                <md-button class="md-fab" aria-label="mail">
-                                    <i class="fa fa-tasks" aria-hidden="true"></i>
-                                </md-button>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </header>
-
+        <!-- <div class="wrapper" layout='column' layout-align='center stretch'>
+            <efr-header></efr-header>
             <section class='contentArea' layout flex>
-
-                <aside layout='column' flex='20'>
-                    <div class="profileArea" ng-controller='userProfileCtrl'>
-                        <figure><img class='profilePic' ng-src="{{pic}}" alt="" /></figure>
-                        <label class='profileName' for="name">Hi, {{name}}</label>
-                        <a class='.btns' href="#">My Account</a>
-                        <a class='.btns' href="#">LogOut</a>
-                    </div>
-                    <hr>
-                    <div class="taskArea">
-                        <a class='.btns' href="#">Attendence</a>
-                        <a class='.btns' href="#">Policies</a>
-                        <a class='.btns' href="#">Reimbursments</a>
-                        <a class='.btns' href="#">Reporting Structure</a>
-                        <a class='.btns' href="#">Leaves</a>
-                        <a class='.btns' href="#">Appreasels</a>
-                    </div>
-                </aside>
-
-                <section layout='column' flex>
-
-                    <div class="empdashboard">
-                        empdashboard here
-                    </div>
-
-                    <div class="hrdashboard">
-                        hrdashboard here <br>
-                        <md-menu ng-controller="BasicDemoCtrl">
-                          <md-button aria-label="Open phone interactions menu" class="md-icon-button" ng-click="ctrl.openMenu($mdOpenMenu, $event)">
-                            DONKEY
-                          </md-button>
-                          <md-menu-content width="3">
-                            <md-menu-item>
-                              <md-button ng-click="ctrl.redial($event)">Redial</md-button>
-                            </md-menu-item>
-                            <md-menu-item>
-                              <md-button disabled="disabled" ng-click="ctrl.checkVoicemail()">Check voicemail</md-button>
-                            </md-menu-item>
-                            <md-menu-divider></md-menu-divider>
-                            <md-menu-item>
-                              <md-button ng-click="ctrl.toggleNotifications()">
-                                {{ctrl.notificationsEnabled ? 'Disable' : 'Enable' }} notifications
-                              </md-button>
-                            </md-menu-item>
-                          </md-menu-content>
-                        </md-menu>
-                    </div>
-
-                    <div class="nav">
-                        Itdashboard here
-                    </div>
-
-                </section>
-
+                <efr-aside></efr-aside>
+                <div class='ng-view'></div>
             </section>
-
-            <!-- <footer>
-                <div class="footerLinks">
-
-                </div>
-                <div class="copyright">
-                    CopyRight &#169; Emami Frank Ross, 2016
-                </div>
-            </footer> -->
-        </div>
-
-        <!-- <script type="text/javascript" src='bower_components/angular/angular.min.js'></script>
-        <script type="text/javascript" src='bower_components/angular-animate/angular-animate.js'></script>
-        <script type="text/javascript" src='bower_components/angular-aria/angular-aria.js'></script>
-        <script type="text/javascript" src='bower_components/angular-messages/angular-messages.js'></script>
-        <script type="text/javascript" src='bower_components/angular-material/angular-material.js'></script> -->
-
+            <efr-footer></efr-footer>
+        </div> -->
         <script type="text/javascript" src='js/lib.js'></script>
-
         <script type="text/javascript" src="js/main/main.js"></script>
     </body>
 </html>
