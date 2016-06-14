@@ -23,7 +23,6 @@ gulp.task('browser-sync', function() {
     });
 });
 
-
 //For min-scripts
 gulp.task('minscripts', function(){
     gulp.src('js/lib/*.min.js')
@@ -42,6 +41,7 @@ gulp.task('minscripts', function(){
 gulp.task('scripts', function(){
     gulp.src('js/main/main.js')
         .pipe(uglify())
+        .pipe(concat('main.js'))
         .pipe(rename({
             suffix: '.min'
         }))
@@ -73,7 +73,9 @@ gulp.task('styles', function(){
 //For Templates
 gulp.task('templates', function(){
     gulp.src('templates/**/*.jade')
-        .pipe(jade())
+        .pipe(jade({
+            pretty:true
+        }))
         .pipe(gulp.dest('pages/'));
 });
 

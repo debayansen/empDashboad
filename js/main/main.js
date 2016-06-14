@@ -1,4 +1,5 @@
 angular.module("frankrossManagement",['ngMaterial'])
+// angular.module("frankrossManagement",['ngMaterial','ngRoute','hrModule','empModule'])
 
 angular.module('frankrossManagement')
     .directive('efrLogin', function(){

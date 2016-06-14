@@ -1,4 +1,4 @@
 angular
-    .module('empModule')
+    .module('empModule',[])
     .controller('empCtrl',[])
     ;
