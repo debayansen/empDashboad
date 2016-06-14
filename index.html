@@ -8,15 +8,15 @@
         <link rel="stylesheet" href="css/style.css" media="screen" title="no title" charset="utf-8">
     </head>
     <body ng-app='frankrossManagement' layout='column' flex layout-align='start stretch'>
-        <efr-login></efr-login>
-        <!-- <div class="wrapper" layout='column' layout-align='center stretch'>
-            <efr-header></efr-header>
+        <efr-login class='loginPanel' ng-controller='loginCtrl' layout='column' layout-align='start stretch' flex></efr-login>
+        <div class="wrapper" layout='column' layout-align='center stretch'>
+            <efr-header class="md-toolbar-tools" ng-controller='userProfileCtrl' layout="row" flex layout-align="center center"></efr-header>
             <section class='contentArea' layout flex>
-                <efr-aside></efr-aside>
+                <efr-aside layout='column' flex='20' ></efr-aside>
                 <div class='ng-view'></div>
             </section>
             <efr-footer></efr-footer>
-        </div> -->
+        </div>
         <script type="text/javascript" src='js/lib.js'></script>
         <script type="text/javascript" src="js/main/main.js"></script>
     </body>

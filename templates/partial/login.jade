@@ -1,35 +1,31 @@
-.loginPanel(ng-controller='loginCtrl',
-    layout='column',
-    layout-align='start stretch',
-    flex
-    )
-    .frBanner(layout='column',
-        layout-align='none',
-        flex='30'
-        ) Emami Frank Ross: Login Portal
-        .userLogin(flex)
-            .panel
-                Please Login.
-                form.login(
-                    action='',
-                    method='post'
+
+.frBanner(layout='column',
+    layout-align='none',
+    flex='30'
+    ) Emami Frank Ross: Login Portal
+    .userLogin(flex)
+        .panel
+            Please Login.
+            form.login(
+                action='',
+                method='post'
+                )
+                label(for='username') Username:
+                input(type='text',
+                    name='username',
+                    value='',
+                    placeholder='Enter your User Name here.'
                     )
-                    label(for='username') Username:
-                    input(type='text',
-                        name='username',
-                        value='',
-                        placeholder='Enter your User Name here.'
-                        )
-                    br
-                    label(for='password') Password:
-                    input(type='text',
-                        name='password',
-                        value='',
-                        placeholder='Enter your password here.'
-                        )
-                    br
-                    input(type='button',
-                        name="login",
-                        value="Login",
-                        placeholder='Login'
-                        )
+                br
+                label(for='password') Password:
+                input(type='text',
+                    name='password',
+                    value='',
+                    placeholder='Enter your password here.'
+                    )
+                br
+                input(type='button',
+                    name="login",
+                    value="Login",
+                    placeholder='Login'
+                    )

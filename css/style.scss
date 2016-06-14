@@ -1,5 +1,4 @@
 @import "var.scss";
-@import "loginPanel.scss";
 @import "header.scss";
 @import "footer.scss";
 
@@ -13,6 +12,8 @@ body{
     // height: 100%;
     // background-color: red;
 }
+
+@import "loginPanel.scss";
 
 .wrapper{
     display: block;
