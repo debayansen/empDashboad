@@ -2,18 +2,21 @@
     layout-align='end center',
     flex='30'
     ) Emami Frank Ross: Login Portal
-.userLogin(flex)
+.userLogin(flex,
+    layout='column',
+    layout-align='start center'
+    )
     .panel
-        Please Login.
-        form.login(
+        ='Please Login.'
+        form.login(layout='column',
             action='',
             method='post'
             )
-            label(for='username') Username:
+            label(for='username') Email:
             input(type='text',
                 name='username',
                 value='',
-                placeholder='Enter your User Name here.'
+                placeholder='Enter your email here.'
                 )
             br
             label(for='password') Password:
